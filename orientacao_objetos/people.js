@@ -33,10 +33,6 @@ class Teacher extends Person{
 }
 
 class Student extends Person{
-    constructor(firstName, lastName, age, gender, interests){
-        super(firstName, lastName, age, gender, interests)
-    }
-
     greeting(){
         return `Yo! I'm ${this.lastName}.`
     }
