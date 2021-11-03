@@ -25,7 +25,6 @@ btnGenerateList.onclick = () => {
     const promises = timePromisses.map((time) => createPromises(time, generate_random_number(10)))
     Promise.allSettled(promises).then((results) => {
         const values = results.reduce(concatResultValues,[])
-        console.log(values)
         addItemsInSpanList(values)
     })
 }
