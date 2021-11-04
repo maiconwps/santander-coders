@@ -21,7 +21,6 @@ ul{
     flex-wrap: wrap;
     justify-content: space-around ;
     flex-direction: row;
-    
 }
 
 body{
@@ -46,7 +45,7 @@ header{
 }
 
 header h1{
-    color: rgb(189, 183, 183);
+    color: white;
     margin-bottom: 1rem;
     width: 90;
 }
@@ -58,16 +57,24 @@ header h3{
     font-size: 1rem;
 }
 
-main button{
+main .buttons{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.buttons button{
     align-self: flex-end;
     border: solid 2px white;
     background-color: rgba(0, 0, 128, 0.254);
     padding: 0.5rem 0.75rem;
     border-radius: 0.25rem;
     color: white;
+    width: 7rem;
+    margin-left: 1rem;
 }
 
-main button:hover{
+.buttons button:hover{
     background-color: blue;
     font-weight: 600;
 }
@@ -76,3 +83,8 @@ section.list{
     margin-top: 10vh;
 }
 
+.buttons button[name=order].--is-disable{
+    pointer-events: none;
+    color: gray;
+    border-color: gray;
+}
